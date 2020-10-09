@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "MultiStory"
+    }
+  },
+  "defaultProject": "MultiStory",
+  "cli": {
+    "analytics": "877c0eb8-0f9b-432f-8038-27126fee3e88"
+  }
 }
