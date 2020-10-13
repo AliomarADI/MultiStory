@@ -1,0 +1,26 @@
+  <div class="container bg-dark text-white" style="opacity: 0.85">
+    <section style="height: 30px"></section>
+    <div class="row">
+        <div class="col-3"><app-list-links-profile></app-list-links-profile></div>
+        <div class="col-8">
+            <p style="text-indent: 10px;">In general, you need to show the reader the heart of each character as soon as we meet them. This usually means showing us their flaws in the most visual, unusual and interesting way. (Although it doesn't always work, more on that later). ... Sometimes professional screenwriters describe their characters as "handsome" or "natural beauty". Here are a few more examples of character descriptions - those that seem to break the "rules" discussed in this post. ... At least in the traditional sense. The theme in horror films often revolves around the collective "sins" of society, rather than the individual lack of a central character.</p>
+            <br>
+          <form class="justify-content-center">
+            <div class="form-group">
+              <label>Name: </label>
+              <input  [(ngModel)]="name" [ngModelOptions]="{standalone: true}" type="text" placeholder="of Hero" class="input-group">
+            </div>
+
+            <div class="form-group">
+              <label for="describeHero">Please describe your hero: </label>
+              <textarea  [(ngModel)]="story" [ngModelOptions]="{standalone: true}" class="form-control" id="describeHero" rows="3"></textarea>
+            </div>
+            <button (click)="checkButton()" class="btn btn-success" style="float: right">Save</button>
+          </form>
+        </div>
+        <div class="col-1"></div>
+    </div>
+
+
+    <section style="height: 30px"></section>
+  </div>

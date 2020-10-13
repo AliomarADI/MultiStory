@@ -17,6 +17,10 @@ import { CreateWorldComponent } from './create-world/create-world.component';
 import { CreateHeroComponent } from './create-hero/create-hero.component';
 import { MyIdeasComponent } from './my-ideas/my-ideas.component';
 import {FormsModule} from '@angular/forms';
+import { UsersComponent } from './users/users.component';
+import {SearchPipe} from './users/search.pipe';
+import {HoverDirective} from './users/hover.directive';
+import {ZoomDirective} from './main/zoom.directive';
 
 const routes = [
   {path: 'login', component: LoginPageComponent},
@@ -37,7 +41,11 @@ const routes = [
     ListLinksProfileComponent,
     CreateWorldComponent,
     CreateHeroComponent,
-    MyIdeasComponent
+    MyIdeasComponent,
+    UsersComponent,
+    SearchPipe,
+    HoverDirective,
+    ZoomDirective,
   ],
     imports: [
         BrowserModule,

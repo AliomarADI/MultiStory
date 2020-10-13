@@ -8,6 +8,7 @@ import {InputOutputComponent} from './input-output/input-output.component';
 import {MyIdeasComponent} from './my-ideas/my-ideas.component';
 import {CreateHeroComponent} from './create-hero/create-hero.component';
 import {CreateWorldComponent} from './create-world/create-world.component';
+import {UsersComponent} from './users/users.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent},
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path: 'register', component: RegisterPageComponent},
   {path: 'createHero', component: CreateHeroComponent },
   {path: 'createWorld', component: CreateWorldComponent },
-  {path: 'myIdeas', component: MyIdeasComponent }
+  {path: 'myIdeas', component: MyIdeasComponent },
+  {path: 'users', component: UsersComponent},
 ];
 
 @NgModule({

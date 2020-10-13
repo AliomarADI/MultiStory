@@ -1,0 +1,26 @@
+<div class="container bg-dark text-white" style="opacity: 0.85">
+  <section style="height: 50px"></section>
+  <div class="row">
+    <div class="col-3"><app-list-links-profile></app-list-links-profile></div>
+    <div class="col-8">
+      <p style="text-indent: 10px;"> How to write descriptions in a book to interest the reader. How beautiful to describe the area against which a literary plot develops, an interesting description of nature in books - literary life hacks and advice to authors of works of fiction. ... How to describe the scene in the book. Setting the scene is an important part of a good book when it comes to fiction. The landscapes and interiors in which the plot develops are not just a background, but a “speaking” background, which makes the story more lively and exciting. The material knigastudio.ru will help you assess the importance of literary descriptions and learn how to make them interesting. Description in the book: live sensations.</p>
+      <br>
+      <form class="justify-content-center">
+        <div class="form-group">
+          <label>Name: </label>
+          <input [(ngModel)]="name" [ngModelOptions]="{standalone: true}" type="text" placeholder="of World" class="input-group">
+        </div>
+
+        <div class="form-group">
+          <label for="describeHero">Please describe your world: </label>
+          <textarea [(ngModel)]="story" [ngModelOptions]="{standalone: true}" class="form-control" id="describeHero" rows="3"></textarea>
+        </div>
+        <button (click)="checkButton()" class="btn btn-success" style="float: right">Save</button>
+      </form>
+    </div>
+    <div class="col-1"></div>
+  </div>
+
+
+  <section style="height: 30px"></section>
+</div>
