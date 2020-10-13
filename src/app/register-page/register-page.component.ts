@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {findLast} from '@angular/compiler/src/directive_resolver';
 
 @Component({
   selector: 'app-register-page',
@@ -7,20 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterPageComponent implements OnInit {
 
-  usersReg: ['Any', 'Hello'];
-  isDisplayReg = false ;
-  isDisplayUser =  true;
-
-  // tslint:disable-next-line:typedef
-  registerClick(){
-    this.isDisplayUser = !this.registerClick;
-  }
 
 
+  displayReg = true;
+  displayUser = false;
+  createUser = '';
+  jai = '';
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+
+  displayButton() {
+    this.displayReg = false;
+    this.displayUser = true;
+  }
 }
