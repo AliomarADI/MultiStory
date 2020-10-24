@@ -1,5 +1,5 @@
 
-<div *ngIf="displayReg"  class="container bg-dark text-white-50"  >
+<div  class="container bg-dark text-white-50"  >
   <section style="height: 100px"></section>
   <div class="row" style="width: 80%;">
 
@@ -7,7 +7,7 @@
         <div class="col-4">
           <div class="form-group">
             <label for="InputEmail1">Email address</label>
-            <input   class="form-control" id="InputEmail1" aria-describedby="emailHelp" [(ngModel)]="createUser">
+            <input   class="form-control" id="InputEmail1" name="name"  [(ngModel)]="emailAsNameSaved">
 
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
@@ -19,44 +19,12 @@
             <label for="Password2"> Rewrite password</label>
             <input type="password" class="form-control" id="Password2">
           </div>
-          <button (click)="displayButton()"  class="btn btn-primary" style="float: right"  >Submit</button>
+          <button (click)="register(emailAsNameSaved)"   class="btn btn-primary" style="float: right"  >Submit</button>
+          <p class="badge">{{count + 1}} users in array</p>
           <section style="height: 120px"></section>
         </div>
       <div class="col-2"></div>
 
 
-
   </div>
 </div>
-
-<!--  ----------------------------------------------- -->
-  <a routerLink="/profile">
-  <div *ngIf="displayUser" class="container" appHover>
-    <div class="row">
-      <div class="col-4"></div>
-      <div  class="col-3" appHover style="padding: 4%">
-        <div class="card bg-dark text-white-50" style="width: 140%;">
-          <img class="card-img-top" src="https://i.pinimg.com/originals/79/83/e7/7983e78de8c1222646c9435ba22777c1.jpg" alt="Card image cap">
-          <div class="card-body">
-            <div class="card-img-overlay">
-              <h5 class="card-title  d-none d-lg-inline" [hidden]="!createUser">{{createUser}}</h5>
-
-            </div>
-
-            <h5 class="card-text  d-lg-none">{{createUser | slice:0:10}}</h5>
-            <p class="card-text d-none d-lg-inline">Some info here </p><br>
-            <br>
-            <a routerLink="/profile" class="btn btn-success hovered" >Go to user</a>
-          </div>
-        </div>
-      </div>
-      </div>
-    <div class="col-5"></div>
-
-    </div>
-  </a>
-
-
-<!--  ----------------------------------------------- -->
-
-

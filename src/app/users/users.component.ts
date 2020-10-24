@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {UsersService} from '../Services/users.service';
+import {User} from './user';
 
 @Component({
   selector: 'app-users',
@@ -8,16 +10,18 @@ import { Component, OnInit } from '@angular/core';
 export class UsersComponent implements OnInit {
   SearchStr = '';
 
-  constructor() { }
+  constructor(private UserServe: UsersService) { }
 
-  users = [
-    {name: 'Sher Andrey'},
-    {name: 'Nazarev Evfimiy'},
-    {name: 'Mike Tyson'},
-    {name: 'Александр Македонский'},
-    {name: 'Деметрий Фалерский'},
-    {name: 'Гиппократ Хиосский'},
-  ];
+  @Input()
+  users: User[];
+
+  getUsers(){
+    this.users = this.UserServe.getUsers();
+  }
+
+  hideUsers(){
+    this.users = []
+  }
 
 
   ngOnInit(): void {
