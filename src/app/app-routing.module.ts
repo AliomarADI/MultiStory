@@ -9,15 +9,32 @@ import {MyIdeasComponent} from './my-ideas/my-ideas.component';
 import {CreateHeroComponent} from './create-hero/create-hero.component';
 import {CreateWorldComponent} from './create-world/create-world.component';
 import {UsersComponent} from './users/users.component';
+import {AuthGuard} from './Guards/auth/auth.guard';
+import {UserFormDeactivateGuard} from './Guards/registerCheckGuard/user-form-deactivate.guard';
+import {CheckFillinGInfoGuard} from './Guards/checkFillingInfo/check-fillin-ginfo.guard';
+import {CheckFillinGInfoWorldGuard} from './Guards/checkFillingInfo/check-fillin-ginfo-world.guard';
 
 const routes: Routes = [
   {path: '', component: MainComponent},
-  {path: 'login', component: LoginPageComponent},
+  {path: 'login',
+    component: LoginPageComponent,
+    canActivate: [AuthGuard],
+  },
+
   {path: 'main', component: MainComponent},
   {path: 'profile', component: ProfilePageComponent},
-  {path: 'register', component: RegisterPageComponent},
-  {path: 'createHero', component: CreateHeroComponent },
-  {path: 'createWorld', component: CreateWorldComponent },
+  {path: 'register',
+    component: RegisterPageComponent,
+    canDeactivate: [UserFormDeactivateGuard],
+  },
+  {path: 'createHero',
+    component: CreateHeroComponent,
+    canDeactivate: [CheckFillinGInfoGuard]
+  },
+  {path: 'createWorld',
+    component: CreateWorldComponent,
+    canDeactivate: [CheckFillinGInfoWorldGuard],
+  },
   {path: 'myIdeas', component: MyIdeasComponent },
   {path: 'users', component: UsersComponent},
 ];

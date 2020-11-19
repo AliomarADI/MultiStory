@@ -12,11 +12,23 @@ export class CreateHeroComponent implements OnInit, DoCheck,
   'name': String;
   'story': String;
 
+
   constructor() { }
 
   checkButton() {
     console.log('~Buton WORK~');
   }
+
+  public hasUnsavedData():boolean{
+    if(this.name == ''){
+      if (this.story == ''){
+        return false;
+      }
+      return false; // не заполнен, нет преграды
+    }
+    return true;
+  }
+
 
   ngOnChanges() { console.log('AppComponent:OnChanges'); }
   ngOnInit() { console.log('AppComponent:OnInit'); }
