@@ -5,22 +5,42 @@
 
       <div class="col-6"></div>
         <div class="col-4">
-          <div class="form-group">
-            <label for="InputEmail1">Email address</label>
-            <input   class="form-control" id="InputEmail1" type="email" name="email" #refEmail  [(ngModel)]="emailAsNameSaved">
-            <input hidden [(ngModel)]="dliaPrikola">
+
+            <div class="form-group">
+            <label for="InputEmail1">Username</label>
+
+              <input   class="form-control" id="InputEmail1" type="text" name="name"
+                     #refEmail
+                     [(ngModel)]="emailAsNameSaved"
+                       min="3"
+                       pattern="[a-zA-Z0-9_-]{5,}"
+                       required>
+
+
+              <input hidden [(ngModel)]="dliaPrikola">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
+
           <div class="form-group">
-            <label for="Password1">Password</label>
-            <input type="password" class="form-control" id="Password1">
+            <label>E-mail:</label>
+            <input type="email" class="form-control"
+                   [(ngModel)]="username" min="6"
+                   pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"
+                   required>
+          </div>
+
+          <div class="form-group">
+            <label for="Password1" >Password</label>
+            <input type="password" class="form-control" id="Password1" min="6" required>
           </div>
           <div class="form-group">
             <label for="Password2"> Rewrite password</label>
-            <input type="password" class="form-control" id="Password2">
+            <input type="password" class="form-control" id="Password2" min="6" required>
           </div>
           <button (click)="register(emailAsNameSaved)"   class="btn btn-primary" style="float: right"  >Submit</button>
           <p class="badge">{{count + 1}} users in array</p>
+
+
           <section style="height: 120px"></section>
         </div>
       <div class="col-2"></div>

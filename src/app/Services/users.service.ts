@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {User} from '../users/user';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -22,5 +23,7 @@ export class UsersService {
     return this.users;
   }
 
-  constructor() { }
+  constructor() {
+
+  }
 }

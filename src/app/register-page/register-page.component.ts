@@ -15,10 +15,12 @@ export class RegisterPageComponent implements OnInit {
   emailAsNameSaved: '';
   dliaPrikola: '';
   str = '';
-
+  username: string;
   users: User[];
   hideUsers = false;
   count: number;
+
+
 
   // для guards
   @ViewChild('userForm')
