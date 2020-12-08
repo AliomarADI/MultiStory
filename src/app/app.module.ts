@@ -16,7 +16,7 @@ import { ListLinksProfileComponent } from './list-links-profile/list-links-profi
 import { CreateWorldComponent } from './create-world/create-world.component';
 import { CreateHeroComponent } from './create-hero/create-hero.component';
 import { MyIdeasComponent } from './my-ideas/my-ideas.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { UsersComponent } from './users/users.component';
 import {SearchPipe} from './users/search.pipe';
 import {HoverDirective} from './users/hover.directive';
@@ -47,12 +47,13 @@ const routes = [
     HoverDirective,
     ZoomDirective,
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        RouterModule.forRoot(routes),
-        FormsModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule.forRoot(routes),
+    FormsModule,
+    ReactiveFormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

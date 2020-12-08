@@ -4,6 +4,7 @@ import {User} from '../users/user';
 import {UsersService} from '../Services/users.service';
 import {MessageService} from '../Services/message.service';
 import {NgForm} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-register-page',
@@ -49,10 +50,10 @@ export class RegisterPageComponent implements OnInit {
 
 
 
-
   constructor(private UsersServe: UsersService,private  Message: MessageService) { }
 
   ngOnInit(): void {
   }
+
 
 }

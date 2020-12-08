@@ -7,7 +7,7 @@
         <div class="col-4">
           <div class="form-group">
             <label for="InputEmail1">Email address</label>
-            <input   class="form-control" id="InputEmail1" name="name"  [(ngModel)]="emailAsNameSaved">
+            <input   class="form-control" id="InputEmail1" type="email" name="email" #refEmail  [(ngModel)]="emailAsNameSaved">
             <input hidden [(ngModel)]="dliaPrikola">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
