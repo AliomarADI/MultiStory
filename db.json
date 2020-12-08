@@ -1,0 +1,45 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "idUserFK": 1,
+      "name": "48 Layers",
+      "description": "About 48 layers for life with examples"
+    },
+    {
+      "id": 2,
+      "idUserFK": 1,
+      "name": "Sapiens",
+      "description": "History of humans"
+    },
+    {
+      "id": 3,
+      "idUserFK": 1,
+      "name": "Dota 2",
+      "description": "About cybersport in 21"
+    },
+    {
+      "id": 4,
+      "idUserFK": 1,
+      "name": "R6 Siege",
+      "description": "Some description"
+    },
+    {
+      "_id": "123",
+      "_idUserFK": 1,
+      "_name": "Aliomar",
+      "_description": "dasdas",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

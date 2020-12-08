@@ -1,0 +1,57 @@
+<div class="container" style="opacity: 0.95">
+  <br>
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-3"> </div>
+    <div class="col-6 bg-dark text-white">
+      <br>
+      <br>
+      <br>
+
+<!--      <table id="users">-->
+<!--        <tr>-->
+<!--          <th *ngFor="let col of columns">-->
+<!--            {{col}}-->
+<!--          </th>-->
+<!--        </tr>-->
+<!--        <tr *ngFor="let post of ideas">-->
+<!--          <td *ngFor="let col of index">-->
+<!--            {{post[col]}}-->
+<!--          </td>-->
+<!--        </tr>-->
+
+<!--      </table>-->
+
+      <ul *ngFor="let post of ideas">
+        <li>  {{post.id}} : {{post.name}} : {{post.description}}</li>
+        <button class="btn-danger" (click)="deletePost(post)">Delete posts</button>
+      </ul>
+
+      <label>ID</label>
+      <input class="input-group" type="text" [(ngModel)]="id" placeholder="ID">
+      <br>
+      <label>Name</label>
+      <input class="input-group" type="text" [(ngModel)]="name" placeholder="Name">
+      <br>
+      <label>Description</label>
+      <input class="input-group" type="text" [(ngModel)]="description" placeholder="Description">
+      <br>
+      <br>
+      <br>
+      <button class="btn-success" (click)="getPosts()">Get posts</button>
+      <button class="btn-primary" (click)="createPost(id,name,description)">Create posts</button>
+
+
+      <br>
+      <br>
+      <br>
+    </div>
+
+
+    <div class="col-3"> </div>
+  </div>
+  <br>
+  <br>
+  <br>
+</div>
