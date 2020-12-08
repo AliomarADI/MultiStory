@@ -21,6 +21,9 @@ import { UsersComponent } from './users/users.component';
 import {SearchPipe} from './users/search.pipe';
 import {HoverDirective} from './users/hover.directive';
 import {ZoomDirective} from './main/zoom.directive';
+import { POSTSComponent } from './posts/posts.component';
+import {RequestsTestService} from './Services/requests-test.service';
+import {HttpClientModule} from '@angular/common/http';
 
 const routes = [
   {path: 'login', component: LoginPageComponent},
@@ -46,15 +49,17 @@ const routes = [
     SearchPipe,
     HoverDirective,
     ZoomDirective,
+    POSTSComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [RequestsTestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -13,6 +13,7 @@ import {AuthGuard} from './Guards/auth/auth.guard';
 import {UserFormDeactivateGuard} from './Guards/registerCheckGuard/user-form-deactivate.guard';
 import {CheckFillinGInfoGuard} from './Guards/checkFillingInfo/check-fillin-ginfo.guard';
 import {CheckFillinGInfoWorldGuard} from './Guards/checkFillingInfo/check-fillin-ginfo-world.guard';
+import {POSTSComponent} from './posts/posts.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent},
@@ -37,6 +38,7 @@ const routes: Routes = [
   },
   {path: 'myIdeas', component: MyIdeasComponent },
   {path: 'users', component: UsersComponent},
+  {path: 'posts', component: POSTSComponent}
 ];
 
 @NgModule({
